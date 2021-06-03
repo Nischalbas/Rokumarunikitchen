@@ -1,0 +1,39 @@
+
+body {
+    background: rgb(243, 212, 212);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: crimson;
+    height: 200px;
+}
+.Logo {
+   height: 200px;
+}
+h3 {
+    margin: 30px;
+}
+h4 {
+    margin: 30px;
+}
+details {
+    margin: 30px;
+}
+img {
+    height: 230px;
+}
+Marquee {
+    color: white;
+}
+footer {
+    height: 300px;
+    background: black;
+}
+iframe {
+    margin: 110px;
+}
+map {
+    background: black;
+    height: 100%;
+}
