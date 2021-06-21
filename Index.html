@@ -1,64 +1,85 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>rokumarunikitchen</title>
-        <link rel="stylesheet" href="Style.css">
-    </head>
-    <body>
-        <header>
-            <li><a href="Index.html"><img class="Logo" src="/images/LogoRoku632021.png"></a></li>
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <marquee Scrollamount ="20" Direction = "left" Behavior = "alternate" loop ="1" hspace = 100px><iframe src="https://drive.google.com/file/d/1vLmkODNQqSDqf2sQRvh0ez6UQtJiYtQH/preview" width="640" height="480" allow="autoplay"></iframe></marquee>
-    <h3>Our specials</h3>
-    <h2>Samosa</h2><h4><details><summary>What is Samosa?</summary><p>A Samosa is a fried/baked pastry with a savory filling, such as spiced potatoes, peas, and peanuts. <br>It is enjoyed with chilli dipping as a snack or even as a main course.<br> We will be selling delicious home-cooked samosas made with authentic spices and love!</p></details><br>
-        <marquee Scrollamount ="15" Direction = "left" Behavior = "alternate" loop ="1" hspace = 100px><img src="http://localhost:5500/images/momoroku.png"></marquee>
-</h4><h2>Momo</h2><h4><details><summary>What is Momo?</summary><p>Momo is the heart of Nepalese cuisine.<br>It is a Nepali-Tibetan steamed dumpling made of all-purpose flour and filled with either meat or vegetables.<br> It is prepared with special spices which add unique taste to suit the Nepalese palate.</p></details><br></h4>
-        <marquee Scrollamount ="10" Direction = "left" Behavior = "alternate" loop ="1" hspace = 100px></marquee><img src="http://localhost:5500/images/Rasmaliroku.png"></marquee><br>
-        <h2>Rasmalai</h2><h4><details><summary>What is Rasmalai?</summary><P>Ras Malai is a mix of soft Rabsari, dipped and soaked in sweet Rabri.<br>
-
-            Rasbari is spongy cottage cheese ball, made with milk, lemon juice, and sugar<br>
-            
-            Rabri is a silky smooth cream made with milk, condense cream, cardamom, almonds, pistachios, cashews, saffron, and sugar</h4>
-            </P></details>
-   
-    <h3>#Pricing</h3>
-    <P>Samosas: 500¥ For 3 Piece with Dipping! <br>
-        Momo: 600¥ For Veg/Chciken 7 piece with Dipping sauce! <br>
-        Rasmalai Big pack: 700¥ For 8 Pieces<br>
-        Rasmalai small pack: 400¥ For 4 Piece<br>
-        Note: These prices may be changed in the near future.
+<html lang="en">
+<head>
+    <link rel="Stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-primary">
+    <!-- <h1 class="text-sucess">hi</h1>
+    <button class="changecolor"></button> -->
+    <div id="container">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider" onclick="myFunction()" ></span>
+        </label>
+    </div>
+    <header><img src="/images/LogoRoku632021.png" height="200px"></header>
+    <h1>OUR SPECIALS</h1>
+    <div class="mySlides fade">
+        <img class="samosa" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Samosa%20again%201.png" style="width:100%">
+        <h2>Samosa</h2><h4><details><summary>What is Samosa?</summary><p>A Samosa is a fried/baked pastry with a savory filling, such as spiced potatoes, peas, and peanuts. <br>It is enjoyed with chilli dipping as a snack or even as a main course.<br> We will be selling delicious home-cooked samosas made with authentic spices and love!</p></details><br>
+      </div>
+      
+      <div class="mySlides fade">
+        <img class="momo" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Momo%20again%201.png" style="width:100%">
+    </h4><h2>Momo</h2><h4><details><summary>What is Momo?</summary><p>Momo is the heart of Nepalese cuisine.<br>It is a Nepali-Tibetan steamed dumpling made of all-purpose flour and filled with either meat or vegetables.<br> It is prepared with special spices which add unique taste to suit the Nepalese palate.</p></details><br></h4>
+      </div>
+      
+      <div class="mySlides fade">
+        <img class="rasmalai" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Rasmali%20again%201.png" style="width: 100%;">
+        <h2>Rasmalai</h2><h4><details><summary>What is Rasmalai?</summary><P>Ras Malai is a mix of soft Rabsari, dipped and soaked in sweet Rabri.<br>Rasbari is spongy cottage cheese ball, made with milk, lemon juice, and sugar<br>Rabri is a silky smooth cream made with milk, condense cream, cardamom, almonds, pistachios, cashews, saffron, and sugar</h4></P></details>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>    
+      <h1>#Pricing</h1>
+    <h2 class="pricing"><P>Samosas: 500¥ For 3 Piece with Dipping! <br>
         <br>
-        <h3>#Home delivery</h3><br>
-We also do home Delivery<br>
+        Momo: 600¥ For Veg/Chciken 7 piece with Dipping sauce! <br>
+        <br>
+        Rasmalai Big pack: 700¥ For 8 Pieces<br>
+        <br>
+        Rasmalai small pack: 400¥ For 4 Piece<br>
+        <br>
+        Note: These prices may be changed in the near future.
+        <br></h2>
+        <br>
+         <br>
+         <h2 class="home">#Home delivery</h2><br>
+<h2 class="home2">We also do home Delivery<br></h2>
 
 
 
- Ishigaki area: FREE<br>
-
-
-
+ <h3 class="home3">Ishigaki area: FREE<br>
+    <br>
+    <br>
 Harukigawa to Machigahama: FREE<br>
-
-
-
+<br>
+<br>
 Kyomachi to Beppu station: 200¥<BR>
+    <br>
+    <br>
+Fukamachi to Kamegawa station: 200¥<BR></h3>
 
-
-
-Fukamachi to Kamegawa station: 200¥<BR>
-
-
-      </P>
-    <h2>NOTE: We are Only aviable in Oita, beppu and To order <button><a href="https://www.instagram.com/rokumarunikitchen/">Click here and Dm us</a></button></h2>
-    <map><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6669.367865117246!2d131.4922907!3d33.3009309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a71095030c59%3A0xfde2a659b06d4643!2sIshigaki%208%20Chome!5e0!3m2!1sen!2snp!4v1622722102500!5m2!1sen!2snp" width="1360" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe></map>
-    <script src="Main.js"></script>
-       <footer><marquee Scrollamount ="25" Direction = "left" Behavior = "alternate" loop ="1"  > Copyright © All Rights Reserved - Rokumarunikitchen - Only aviable in Oita, beppu - Pickup at Oita, Beppu city Ishigaki 8 chome - Make sure to follow us in instragram, Clicking the button below to visit our Instragram </marquee>
-    <li><a href="https://www.instagram.com/rokumarunikitchen/"><img src="/images/Instragram logo with no background.png"></a></li> 
-    </footer>
-    </body>
-    </html>
+    <h2 class="note">NOTE: We are Only aviable in Oita, beppu and To order Dm us through ourInstragram</h2>
+    <a href="https://www.instagram.com/rokumarunikitchen/"><img class="insta" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Instragram%20logo%20with%20no%20background.png" ></a>
+    <h2 style="text-align: center;">click here to order throught<br> Dm</h2>
+      </P>  
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6669.367865117246!2d131.4922907!3d33.3009309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a71095030c59%3A0xfde2a659b06d4643!2sIshigaki%208%20Chome!5e0!3m2!1sen!2snp!4v1622722102500!5m2!1sen!2snp" width="1200px" height="670px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <footer>Copyright © 2021-2022 all rights reserved</footer>
+      <script src="index.js"></script>
+</body>
+</html>
