@@ -3,6 +3,7 @@ body {
     padding: 0%; 
     background: #f7f0e9;
     transition: .6s;
+    overflow-x: hidden;
 }
 header{
     background: rgba(240, 80, 80, 0.644);
