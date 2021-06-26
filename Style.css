@@ -1,14 +1,177 @@
-
-body {
-    margin: 0%;
-    padding: 0%; 
-    background: #f7f0e9;
-    transition: .6s;
-    overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
 }
-header{
-    background: rgba(240, 80, 80, 0.644);
-    width: min(1100px, 100%) max()
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: white
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+/* toggle mode */
+#container {
+    width: 100%;
+    display: flex;
+    margin: -60px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.switch {
+    position: relative;
+    display:inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 34px;
+    transition: .4s;
+}
+.slider::before{
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: black;
+    border-radius: 50%;
+    transition: .4s;
+}
+input:checked + .slider {
+    background: gray;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+.dark-mode {
+    background: #0b0a14;
+    color: white;
+}
+@media (max-width: 1100px) {
+    #container {
+        width: 100%;
+        display: flex;
+        margin: -120px;
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 h1 {
     text-align: center;
@@ -28,154 +191,11 @@ h1 {
 .note {
   text-align: center;
 }
-.insta {
-  margin-left: 450px;
-}
+
+
 footer {
   background: black;
   color: white;
   text-align: center;
 }
-
-/* Map */
-iframe {
-    margin: 50px;
-}
-/* slideshow image */
-.samosa {
-  width: 1000px;
-}
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
   
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 70%;
-    width: auto;
-    margin-top: -10px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-/* toggle mode */
-#container {
-    width: 100%;
-    display: flex;
-    margin: -60px;
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.switch {
-    position: relative;
-    display:inline-block;
-    width: 60px;
-    height: 34px;
-}
-.switch input{
-    display: none;
-}
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    border-radius: 34px;
-    transition: .4s;
-}
-.slider::before{
-    content: '';
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    left: 4px;
-    bottom: 4px;
-    background: #fff;
-    border-radius: 50%;
-    transition: .4s;
-}
-input:checked + .slider {
-    background: #b892ff;
-}
-input:checked + .slider::before{
-    transform: translateX(26px);
-}
-.dark-mode {
-    background: #0b0a14;
-    color: white;
-}
