@@ -221,3 +221,17 @@ footer {
   text-align: center;
   width: 100%;
 }
+.mobile1 {
+  display: none;
+}
+
+@media (max-width: 910px){
+  #container {
+    display: none;
+  }
+}
+@media (max-width: 910px) {
+.mobile1 {
+  display:list-item;
+}
+}
