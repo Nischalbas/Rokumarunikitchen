@@ -1,92 +1,223 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Rokumarunikitchen</title>
-      <link rel="stylesheet" href="Style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-   <body>
-    <div id="container">
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider" onclick="myFunction()" ></span>
-        </label>
-    </div>
-      <nav>
-        
-         <div class="logo">Rokumarunikitchen</a></div>
-         <input type="checkbox" id="click">
-         <label for="click" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         </label>
-         <ul>
-            <li><a class="active" href="Index.html">Home</a></li>
-            <li><a href="#">Coming soon!</a></li>
-            <li><a href="#">Coming soon!</a></li>
-         </ul>
-      </nav>
-      <h1 style="margin-top: 140px;">OUR SPECIALS</h1>
-    <div class="mySlides fade">
-        <img class="samosa" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Samosa%20again%201.png" style="width:100% ">
-        <h2>Samosa</h2><h4><details><summary>What is Samosa?</summary><p>A Samosa is a fried/baked pastry with a savory filling, such as spiced potatoes, peas, and peanuts. <br>It is enjoyed with chilli dipping as a snack or even as a main course.<br> We will be selling delicious home-cooked samosas made with authentic spices and love!</p></details><br>
-      </div>
-      
-      <div class="mySlides fade">
-        <img class="momo" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Momo%20again%201.png" style="width:100% ">
-    </h4><h2>Momo</h2><h4><details><summary>What is Momo?</summary><p>Momo is the heart of Nepalese cuisine.<br>It is a Nepali-Tibetan steamed dumpling made of all-purpose flour and filled with either meat or vegetables.<br> It is prepared with special spices which add unique taste to suit the Nepalese palate.</p></details><br></h4>
-      </div>
-      
-      <div class="mySlides fade">
-        <img class="rasmalai" src="https://raw.githubusercontent.com/Nischalbas/Rokumarunikitchen/main/Rasmali%20again%201.png">
-        <h2>Rasmalai</h2><h4><details><summary>What is Rasmalai?</summary><P>Ras Malai is a mix of soft Rabsari, dipped and soaked in sweet Rabri.<br>Rasbari is spongy cottage cheese ball, made with milk, lemon juice, and sugar<br>Rabri is a silky smooth cream made with milk, condense cream, cardamom, almonds, pistachios, cashews, saffron, and sugar</h4></P></details>
-      </div>
-      
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      
-      </div>
-      <br>
-      <!-- Comeing soon -->
-      <!-- <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-      </div>     -->
-      <h1>#Pricing</h1>
-    <h2 class="pricing"><P>Samosas: 500¥ For 3 Piece with Dipping! <br>
-        <br>
-        Momo: 600¥ For Veg/Chciken 7 piece with Dipping sauce! <br>
-        <br>
-        Rasmalai Big pack: 700¥ For 8 Pieces<br>
-        <br>
-        Rasmalai small pack: 400¥ For 4 Piece<br>
-        <br>
-        Note: These prices may be changed in the near future.
-        <br></h2>
-        <br>
-         <br>
-         <h2 class="home">#Home delivery</h2><br>
-<h2 class="home2">We also do home Delivery<br></h2>
-
-
-
- <h3 class="home3">Ishigaki area: FREE<br>
-    <br>
-    <br>
-Harukigawa to Machigahama: FREE<br>
-<br>
-<br>
-Kyomachi to Beppu station: 200¥<BR>
-    <br>
-    <br>
-Fukamachi to Kamegawa station: 200¥<BR></h3>
-
-    <h2 class="note">NOTE: We are Only aviable in Oita, beppu and To order Dm us through our Instragram</h2>
-    <footer>
-      copyright © 2021-2021 All rights reserved
-      </footer>
-      <script src="index.js"></script>
-   </body>
-</html>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: white
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+/* toggle mode */
+#container {
+    width: 100%;
+    display: flex;
+    margin: -60px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.switch {
+    position: relative;
+    display:inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 34px;
+    transition: .4s;
+}
+.slider::before{
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: black;
+    border-radius: 50%;
+    transition: .4s;
+}
+input:checked + .slider {
+    background: gray;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+.dark-mode {
+    background: #0b0a14;
+    color: white;
+}
+@media (max-width: 1100px) {
+    #container {
+        width: 100%;
+        display: flex;
+        margin: -120px;
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+@media (max-width: 600px) {
+  nav .logo {
+    font-size: 20px;
+  }
+  @media (max-width: 400px){
+    nav .logo {
+      font-size: 15px;
+    }
+  }
+@media (max-width: 300px){
+  nav .logo {
+    font-size: 10px;
+  }
+}
+}
+.samosa {
+  width:100%;
+}
+.Momo {
+  width:100%;
+}
+.rasmalai {
+  width:100%;
+}
+h1 {
+    text-align: center;
+}
+.pricing {
+    text-align: center;
+}
+.home {
+    text-align: center;
+}
+.home2 {
+    text-align: center;
+}
+.home3 {
+    text-align: center;
+}
+.note {
+  text-align: center;
+}
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
