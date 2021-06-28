@@ -3,6 +3,9 @@ function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode")
 }
+function myinsta() {
+    open ('https://www.instagram.com/rokumarunikitchen/');
+}
 //coming soon
 
 // //Image slider
