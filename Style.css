@@ -188,7 +188,6 @@ input:checked + .slider::before{
   }
 }
 }
-
 .insta {
   cursor: pointer;
 }
@@ -219,6 +218,12 @@ h1 {
 }
 .note {
   text-align: center;
+}
+.instamiddle{
+  height: 20%;
+  width: 20%;
+  margin-left: 40%;
+  cursor: pointer;
 }
 footer {
   background: black;
