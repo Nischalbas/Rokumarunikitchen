@@ -6,7 +6,16 @@ function myFunction() {
 function myinsta() {
     open ('https://www.instagram.com/rokumarunikitchen/');
 }
-//coming soon
+function myPrivacyPolicy(){
+    open('https://rokumarunikitchen.xyz/privacypolicy')
+}
+function mytermsofservice(){
+    open('https://rokumarunikitchen.xyz/Termsofservice')
+}
+// function myPrivacyPolicy(){
+//     // close;
+// }
+// //coming soon
 
 // //Image slider
 // var slideIndex = 1;
