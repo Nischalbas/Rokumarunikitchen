@@ -234,7 +234,16 @@ footer {
 .mobile1 {
   display: none;
 }
-
+.loginbtn {
+  color: white;
+  font-family: sans-serif;
+}
+.PrivacyPolicy{
+  cursor: pointer;
+}
+.Termsofservice {
+  cursor: pointer;
+}
 @media (max-width: 910px){
   #container {
     display: none;
